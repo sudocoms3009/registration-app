@@ -41,7 +41,7 @@ public class SchoolsListViewAdapter extends BaseAdapter {
 
         //ImageView productpicture = (ImageView)convertView.findViewById(R.id.prodpicture);
         TextView schoolName = (TextView)convertView.findViewById(R.id.schoolName);
-        TextView schoolDescriptions = (TextView)convertView.findViewById(R.id.schoolDescriptions);
+        TextView schoolDescriptions = (TextView)convertView.findViewById(R.id.schoolDescription);
         TextView numCourses = (TextView)convertView.findViewById(R.id.numCourses);
 
 

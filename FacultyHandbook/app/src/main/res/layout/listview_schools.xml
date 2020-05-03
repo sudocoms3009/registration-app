@@ -60,7 +60,7 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/schoolDescriptions"
+            android:id="@+id/schoolDescription"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:text="this is school of computer science we do programming and machine learning"
