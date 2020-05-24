@@ -3,7 +3,10 @@ package com.example.facultyhandbook;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 
 import org.json.JSONArray;
@@ -17,6 +20,7 @@ import static java.security.AccessController.getContext;
 public class ScienceActivity extends AppCompatActivity {
 
     ListView listView;
+    LinearLayout taskbar;
 
     SchoolsListViewAdapter schoolsListViewAdapter;
     ArrayList<Schools> arrayList;
@@ -29,6 +33,15 @@ public class ScienceActivity extends AppCompatActivity {
         getSupportActionBar().hide();
 
         listView = findViewById(R.id.science_listview);
+        taskbar = findViewById(R.id.taskbar);
+
+        taskbar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), CoursesMainActivity.class);
+                startActivity(intent);
+            }
+        });
         //arrayList = new ArrayList<>();
 
         /*arrayList.add(new Schools("Computer Science", "this is school of computer science we do programming and machine learning", "12"));
