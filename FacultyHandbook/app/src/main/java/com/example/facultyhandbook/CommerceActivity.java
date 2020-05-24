@@ -19,7 +19,7 @@ public class CommerceActivity extends AppCompatActivity {
     SchoolsListViewAdapter schoolsListViewAdapter;
     ArrayList<Schools> arrayList;
 
-    private static final String URLGET = "http://lamp.ms.wits.ac.za/~s1422085/FacultyRegistrationTest/getCommerceSchools.php";
+    private static final String URLGET = "http://lamp.ms.wits.ac.za/~s1422085/FacultyRegistrationTest_2/getCommerceSchools.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

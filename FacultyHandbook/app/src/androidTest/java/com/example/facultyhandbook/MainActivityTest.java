@@ -41,6 +41,7 @@ public class MainActivityTest {
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
 
+/*
     @Test
     public void mainActivityTest() {
         ViewInteraction appCompatImageView = onView(
@@ -51,6 +52,8 @@ public class MainActivityTest {
                                         0),
                                 0)));
         appCompatImageView.perform(scrollTo(), click());
+
+
 
         ViewInteraction appCompatImageView2 = onView(
                 allOf(withId(R.id.get_search),
@@ -183,5 +186,5 @@ public class MainActivityTest {
                         && view.equals(((ViewGroup) parent).getChildAt(position));
             }
         };
-    }
+    }*/
 }

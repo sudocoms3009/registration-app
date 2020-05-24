@@ -24,7 +24,7 @@ public class ScienceActivity extends AppCompatActivity {
 
     SchoolsListViewAdapter schoolsListViewAdapter;
     ArrayList<Schools> arrayList;
-    private static final String URLGET = "http://lamp.ms.wits.ac.za/~s1422085/FacultyRegistrationTest/getScienceSchools.php";
+    private static final String URLGET = "http://lamp.ms.wits.ac.za/~s1422085/FacultyRegistrationTest_2/getScienceSchools.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
