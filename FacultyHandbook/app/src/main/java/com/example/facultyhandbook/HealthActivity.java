@@ -50,6 +50,7 @@ public class HealthActivity extends AppCompatActivity {
             protected void onPostExecute(String output) {
 
                 //test= output;
+                System.out.println("This is the in.. " + output);
 
                 try {
 
@@ -67,7 +68,7 @@ public class HealthActivity extends AppCompatActivity {
                         String numCourses = jsonobject.getString("numCourses");
 
 
-                        //System.out.println("This is the in.. " + prodName);
+                        System.out.println("This is the in.. " + schoolName);
 
 
 

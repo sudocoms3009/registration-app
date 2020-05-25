@@ -63,6 +63,8 @@ public class ScienceActivity extends AppCompatActivity {
 
             protected void onPostExecute(String output) {
 
+                System.out.println("This is the in.. "+output );
+
                 //test= output;
 
                 try {
@@ -70,6 +72,7 @@ public class ScienceActivity extends AppCompatActivity {
                     JSONArray jsonArray = new JSONArray(output);
                     //gridView = view.findViewById(R.id.gridview);
                     arrayList = new ArrayList<>();
+                    //System.out.println("This is the in.. "+output );
 
                     for (int i = 0; i < jsonArray.length(); i++) {
 

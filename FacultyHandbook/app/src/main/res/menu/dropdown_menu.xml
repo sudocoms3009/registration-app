@@ -23,7 +23,7 @@
 
     <item
         android:id="@+id/logout"
-        android:title="Logout"
+        android:title="Exit"
         android:visible="true" />
 
 </menu>
