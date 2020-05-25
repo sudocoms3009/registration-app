@@ -6,6 +6,7 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -24,7 +25,7 @@ public class ScienceActivity extends AppCompatActivity {
 
     SchoolsListViewAdapter schoolsListViewAdapter;
     ArrayList<Schools> arrayList;
-    private static final String URLGET = "http://lamp.ms.wits.ac.za/~s1422085/FacultyRegistrationTest/getScienceSchools.php";
+    private static final String URLGET = "https://lamp.ms.wits.ac.za/~s1422085/FacultyRegistrationTest_2/getScienceSchools.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,8 @@ public class ScienceActivity extends AppCompatActivity {
         listView = findViewById(R.id.science_listview);
         taskbar = findViewById(R.id.taskbar);
 
+
+
         taskbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,10 +45,18 @@ public class ScienceActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //arrayList = new ArrayList<>();
 
-        /*arrayList.add(new Schools("Computer Science", "this is school of computer science we do programming and machine learning", "12"));
-        arrayList.add(new Schools("Chemistry", "this is school of computer science we do programming and machine learning", "12"));
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getApplicationContext(), CoursesMainActivity.class);
+                startActivity(intent);
+            }
+        });
+        /*arrayList = new ArrayList<>();
+
+        arrayList.add(new Schools("SCHOOL OF COMPUTER SCIENCES AND APPLIED MATHEMATIC", "this is school of computer science we do programming and machine learning", "12"));
+        arrayList.add(new Schools("SCHOOL OF BIOLOGY", "this is school of computer science we do programming and machine learning", "12"));
         arrayList.add(new Schools("Geoscience", "this is school of computer science we do programming and machine learning", "12"));
         arrayList.add(new Schools("Physics", "this is school of computer science we do programming and machine learning", "12"));
         arrayList.add(new Schools("Mathematics", "this is school of computer science we do programming and machine learning", "12"));
@@ -79,9 +90,9 @@ public class ScienceActivity extends AppCompatActivity {
                         JSONObject jsonobject = jsonArray.getJSONObject(i);
 
 
-                        String schoolName = jsonobject.getString("schoolName");
-                        String schoolDescription = jsonobject.getString("schoolDescription");
-                        String numCourses = jsonobject.getString("numCourses");
+                        String schoolName = jsonobject.getString("SCHOOL_NAME");
+                        String schoolDescription = jsonobject.getString("SCHOOL_DESCRIPTION");
+                        String numCourses = jsonobject.getString("NUMBER_OF_COURSES");
 
 
                         //System.out.println("This is the in.. " + schoolName);

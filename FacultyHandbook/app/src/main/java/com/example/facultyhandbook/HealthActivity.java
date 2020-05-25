@@ -18,7 +18,7 @@ public class HealthActivity extends AppCompatActivity {
 
     SchoolsListViewAdapter schoolsListViewAdapter;
     ArrayList<Schools> arrayList;
-    private static final String URLGET = "http://lamp.ms.wits.ac.za/~s1422085/FacultyRegistrationTest/getHealthSchools.php";
+    private static final String URLGET = "https://lamp.ms.wits.ac.za/~s1422085/FacultyRegistrationTest/getHealthSchools.php";
 
 
     @Override

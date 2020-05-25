@@ -5,10 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 
 public class SchoolsListViewAdapter extends BaseAdapter {
@@ -39,7 +42,7 @@ public class SchoolsListViewAdapter extends BaseAdapter {
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
         convertView = inflater.inflate(R.layout.listview_schools, null);
 
-        //ImageView productpicture = (ImageView)convertView.findViewById(R.id.prodpicture);
+        ImageView pic = (ImageView)convertView.findViewById(R.id.picture);
         TextView schoolName = (TextView)convertView.findViewById(R.id.schoolName);
         TextView schoolDescriptions = (TextView)convertView.findViewById(R.id.schoolDescription);
         TextView numCourses = (TextView)convertView.findViewById(R.id.numCourses);
@@ -50,6 +53,18 @@ public class SchoolsListViewAdapter extends BaseAdapter {
         schoolDescriptions.setText(arraylist.get(position).getschoolDescriptions());
         numCourses.setText(arraylist.get(position).getnumCourses());
 
+        if(arraylist.get(position).getschoolName().equals("SCHOOL OF COMPUTER SCIENCES AND APPLIED MATHEMATIC")){
+
+            pic.setImageResource(R.drawable.computerscience);
+        }
+        if(arraylist.get(position).getschoolName().equals("SCHOOL OF BIOLOGY")){
+
+            pic.setImageResource(R.drawable.biology);
+        }
+
+
+
+
 
         return convertView;
     }
@@ -58,5 +73,6 @@ public class SchoolsListViewAdapter extends BaseAdapter {
     public int getCount() {
         return this.arraylist.size();
     }
+
 
 }

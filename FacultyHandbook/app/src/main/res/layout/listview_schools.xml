@@ -41,7 +41,7 @@
             android:layout_weight="0.8"
             android:layout_height="wrap_content"
             android:text="Computer Science"
-            android:textSize="18sp"
+            android:textSize="14sp"
             android:textColor="#000"
             android:layout_marginLeft="10dp"
             android:textStyle="bold"
@@ -52,7 +52,7 @@
                 android:layout_weight="0.14"
                 android:layout_height="wrap_content"
                 android:text="10"
-                android:textSize="13sp"
+                android:textSize="12sp"
                 android:textColor="#000"
                 android:layout_marginRight="5dp"
                 android:gravity="end"
@@ -65,10 +65,10 @@
             android:layout_height="35dp"
             android:text="this is school of computer science we do programming and machine learning"
             android:textColor="#000"
-            android:textSize="12sp"
+            android:textSize="10sp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="0dp"
-            />
+            android:maxLines="2" />
     </LinearLayout>
 
 
