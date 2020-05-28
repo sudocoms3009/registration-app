@@ -13,7 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".CoursesMainActivity"></activity>
+        <activity android:name=".CourseInfoActivity"></activity>
+        <activity android:name=".AppContentActivity" />
+        <activity android:name=".GovernanceActivity" />
+        <activity android:name=".FacultyLocationActivity" />
+        <activity android:name=".CoursesMainActivity" />
         <activity android:name=".HumanitiesActivity" />
         <activity android:name=".HealthActivity" />
         <activity android:name=".EngineeringActivity" />

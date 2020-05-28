@@ -22,44 +22,62 @@
             android:layout_weight="0.8"
             android:layout_height="wrap_content"
             android:text="Computer Science"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textColor="#000"
             android:layout_marginLeft="10dp"
             android:textStyle="bold"
             />
             <TextView
-                android:id="@+id/nqfPoints"
+                android:id="@+id/faculty"
                 android:layout_width="0dp"
                 android:layout_weight="0.14"
                 android:layout_height="wrap_content"
-                android:text="10"
-                android:textSize="13sp"
+                android:text="CSAM"
+                android:textSize="12sp"
                 android:textColor="#000"
                 android:layout_marginRight="5dp"
-                android:gravity="end"
+                android:gravity="right"
                 />
         </LinearLayout>
 
         <TextView
             android:id="@+id/courseName"
             android:layout_width="match_parent"
-            android:layout_height="30dp"
+            android:layout_height="wrap_content"
             android:text="Computer Science"
             android:textColor="#000"
-            android:textSize="16sp"
+            android:textSize="13sp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="0dp"
             />
-        <TextView
-            android:id="@+id/faculty"
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:gravity="right"
             android:layout_height="25dp"
-            android:text="CSAM"
-            android:textSize="15sp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="0dp"
-            />
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/duration"
+                android:layout_width="0dp"
+                android:layout_weight="0.8"
+                android:gravity="left"
+                android:layout_height="wrap_content"
+                android:text="CSAM"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                />
+            <TextView
+                android:id="@+id/nqfPoints"
+                android:layout_width="0dp"
+                android:layout_weight="0.2"
+                android:gravity="right"
+                android:layout_height="wrap_content"
+                android:text="12"
+                android:textSize="12sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                />
+        </LinearLayout>
     </LinearLayout>
 
 

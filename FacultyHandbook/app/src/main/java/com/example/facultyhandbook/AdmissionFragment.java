@@ -1,6 +1,7 @@
 package com.example.facultyhandbook;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -9,6 +10,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class AdmissionFragment extends Fragment {
@@ -20,6 +23,9 @@ public class AdmissionFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    View view;
+    ImageView back;
+    TextView school;
 
 
     public AdmissionFragment() {
@@ -50,7 +56,22 @@ public class AdmissionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_admission, container, false);
+
+       view = inflater.inflate(R.layout.fragment_admission, container, false);
+
+       // String strSchool = getArguments().getString("School");
+        //school = view.findViewById(R.id.school);
+        back = view.findViewById(R.id.back);
+        //school.setText(strSchool);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), ScienceActivity.class);
+                startActivity(intent);
+            }
+        });
+        return view;
     }
 
 }

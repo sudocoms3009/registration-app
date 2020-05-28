@@ -37,17 +37,21 @@ public class CoursesListViewAdapter extends BaseAdapter {
 
 
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        convertView = inflater.inflate(R.layout.listview_schools, null);
+        convertView = inflater.inflate(R.layout.listview_admission, null);
 
         //ImageView pic = (ImageView)convertView.findViewById(R.id.picture);
         TextView courseCode = (TextView)convertView.findViewById(R.id.courseCode);
         TextView courseName = (TextView)convertView.findViewById(R.id.courseName);
+        TextView courseFaculty = (TextView)convertView.findViewById(R.id.faculty);
+        TextView courseDuration = (TextView)convertView.findViewById(R.id.duration);
         TextView nqfPoints = (TextView)convertView.findViewById(R.id.nqfPoints);
 
 
 
         courseCode.setText(arraylist.get(position).getcourseCode());
         courseName.setText(arraylist.get(position).getcourseName());
+        courseFaculty.setText(arraylist.get(position).getcourseFaculty());
+        courseDuration.setText(arraylist.get(position).getcourseDuration());
         nqfPoints.setText(arraylist.get(position).getnqfPoints());
 
 

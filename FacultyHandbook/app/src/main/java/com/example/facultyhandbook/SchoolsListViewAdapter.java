@@ -53,14 +53,43 @@ public class SchoolsListViewAdapter extends BaseAdapter {
         schoolDescriptions.setText(arraylist.get(position).getschoolDescriptions());
         numCourses.setText(arraylist.get(position).getnumCourses());
 
-        if(arraylist.get(position).getschoolName().equals("SCHOOL OF COMPUTER SCIENCES AND APPLIED MATHEMATIC")){
+        if(arraylist.get(position).getschoolName().equals("SCHOOL OF ANIMAL, PLANTS AND ENVIROMENTAL SCIENCES")){
+
+            pic.setImageResource(R.drawable.environmental);
+        }
+        if(arraylist.get(position).getschoolName().equals("SCHOOL OF CHEMISTRY")){
+
+            pic.setImageResource(R.drawable.chemistry);
+        }
+        if(arraylist.get(position).getschoolName().equals("SCHOOL OF COMPUTER SCIENCE AND APPLIED MATHEMATICS")){
 
             pic.setImageResource(R.drawable.computerscience);
         }
-        if(arraylist.get(position).getschoolName().equals("SCHOOL OF BIOLOGY")){
+        if(arraylist.get(position).getschoolName().equals("SCHOOL OF GEOGRAPHY, ARCHAEOLOGY AND ENVIRONMENTAL")){
+
+            pic.setImageResource(R.drawable.geography);
+        }
+        if(arraylist.get(position).getschoolName().equals("SCHOOL OF GEOSCIENCES")){
+
+            pic.setImageResource(R.drawable.geosciences);
+        }
+        if(arraylist.get(position).getschoolName().equals("SCHOOL OF MATHEMATICS")){
+
+            pic.setImageResource(R.drawable.mathematics);
+        }
+        if(arraylist.get(position).getschoolName().equals("SCHOOL OF MOLECULAR AND CELL BIOLOGY")){
 
             pic.setImageResource(R.drawable.biology);
         }
+        if(arraylist.get(position).getschoolName().equals("SCHOOL OF PHYSICS")){
+
+            pic.setImageResource(R.drawable.physics);
+        }
+        if(arraylist.get(position).getschoolName().equals("SCHOOL OF STATISTICS AND ACTUARIAL SCIENCES")){
+
+            pic.setImageResource(R.drawable.actuarial);
+        }
+
 
 
 

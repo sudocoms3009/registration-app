@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -22,10 +23,12 @@ public class ScienceActivity extends AppCompatActivity {
 
     ListView listView;
     LinearLayout taskbar;
+    ImageView back;
+    String schoolName;
 
     SchoolsListViewAdapter schoolsListViewAdapter;
     ArrayList<Schools> arrayList;
-    private static final String URLGET = "https://lamp.ms.wits.ac.za/~s1422085/FacultyRegistrationTest_2/getScienceSchools.php";
+    private static final String URLGET = "https://lamp.ms.wits.ac.za/~s1422085/FacultyRegistrationTest_2/Schools/getScienceSchools.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,18 +41,32 @@ public class ScienceActivity extends AppCompatActivity {
 
 
 
-        taskbar.setOnClickListener(new View.OnClickListener() {
+        back = findViewById(R.id.back);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+        getSchools();
+        /*taskbar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), CoursesMainActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getApplicationContext(), CoursesMainActivity.class);
+                //intent.putExtra("id",arrayList.get(position).get);
+                intent.putExtra("School", arrayList.get(position).getschoolName());
                 startActivity(intent);
             }
         });
@@ -63,7 +80,7 @@ public class ScienceActivity extends AppCompatActivity {
         schoolsListViewAdapter = new SchoolsListViewAdapter(getApplicationContext(), arrayList);
         listView.setAdapter(schoolsListViewAdapter);*/
 
-        getSchools();
+
     }
 
     public void getSchools() {
@@ -90,7 +107,7 @@ public class ScienceActivity extends AppCompatActivity {
                         JSONObject jsonobject = jsonArray.getJSONObject(i);
 
 
-                        String schoolName = jsonobject.getString("SCHOOL_NAME");
+                        schoolName = jsonobject.getString("SCHOOL_NAME");
                         String schoolDescription = jsonobject.getString("SCHOOL_DESCRIPTION");
                         String numCourses = jsonobject.getString("NUMBER_OF_COURSES");
 

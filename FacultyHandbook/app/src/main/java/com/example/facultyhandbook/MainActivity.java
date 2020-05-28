@@ -104,6 +104,21 @@ public class MainActivity extends AppCompatActivity {
                     public boolean onMenuItemClick(MenuItem menuItem) {
                         switch (menuItem.getItemId()){
 
+                            case R.id.locations:
+                                Intent intent = new Intent(getApplicationContext(), FacultyLocationActivity.class);
+                                startActivity(intent);
+                                return true;
+
+                            case R.id.governance:
+                                Intent intent2 = new Intent(getApplicationContext(), GovernanceActivity.class);
+                                startActivity(intent2);
+                                return true;
+
+                            case R.id.content:
+                                Intent intent3 = new Intent(getApplicationContext(), AppContentActivity.class);
+                                startActivity(intent3);
+                                return true;
+
                             case R.id.settings:
 
                                 return true;

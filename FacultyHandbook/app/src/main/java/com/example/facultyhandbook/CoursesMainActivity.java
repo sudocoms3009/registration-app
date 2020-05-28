@@ -17,6 +17,13 @@ public class CoursesMainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_courses_main);
         getSupportActionBar().hide();
 
+       final String schoolName = getIntent().getStringExtra("School");
+
+/*
+        Fragment fragment = new AdmissionFragment();
+        Bundle bundle0 = new Bundle();
+        bundle0.putString("School", schoolName);
+        fragment.setArguments(bundle0);*/
         loadFragment(new AdmissionFragment());
 
 
@@ -32,24 +39,36 @@ public class CoursesMainActivity extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.admission:
                         fragment = new AdmissionFragment();
+                        //Bundle bundle = new Bundle();
+                        //bundle.putString("School", schoolName);
+                        //fragment.setArguments(bundle);
                         loadFragment(fragment);
 
                         break;
 
                     case R.id.first_year:
                         fragment = new YOS1Fragment();
+                        Bundle bundle1 = new Bundle();
+                        bundle1.putString("School", schoolName);
+                        fragment.setArguments(bundle1);
                         loadFragment(fragment);
 
                         break;
 
                     case R.id.second_year:
-                        fragment = new YOS2Fragment();
-                        loadFragment(fragment);
+                        Fragment fragment2 = new YOS2Fragment();
+                        Bundle bundle2 = new Bundle();
+                        bundle2.putString("School", schoolName);
+                        fragment2.setArguments(bundle2);
+                        loadFragment(fragment2);
 
                         break;
 
                     case R.id.third_year:
                         fragment = new YOS3Fragment();
+                        Bundle bundle3 = new Bundle();
+                        bundle3.putString("School", schoolName);
+                        fragment.setArguments(bundle3);
                         loadFragment(fragment);
 
                         break;
