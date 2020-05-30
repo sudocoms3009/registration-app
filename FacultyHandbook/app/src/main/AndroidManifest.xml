@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".CourseInfoActivity"></activity>
+        <activity android:name=".CurriculaActivity"></activity>
+        <activity android:name=".CourseInfoActivity" />
         <activity android:name=".AppContentActivity" />
         <activity android:name=".GovernanceActivity" />
         <activity android:name=".FacultyLocationActivity" />

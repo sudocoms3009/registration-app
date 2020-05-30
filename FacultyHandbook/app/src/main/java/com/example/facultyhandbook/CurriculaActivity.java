@@ -8,14 +8,17 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ScrollView;
 
-public class FacultyLocationActivity extends AppCompatActivity {
+public class CurriculaActivity extends AppCompatActivity {
 
     ImageView back, science, commerce, engineering, health, humanities, science_up, commerce_up, engineering_up, health_up, humanities_up;
     ScrollView science_pages, commerce_pages, engineering_pages, health_pages, humanities_pages;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_faculty_location);
+        setContentView(R.layout.activity_curricula);
+
         getSupportActionBar().hide();
 
         back = findViewById(R.id.back);
@@ -57,9 +60,9 @@ public class FacultyLocationActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                    science_pages.setVisibility(View.VISIBLE);
-                    science.setVisibility(View.GONE);
-                    science_up.setVisibility(View.VISIBLE);
+                science_pages.setVisibility(View.VISIBLE);
+                science.setVisibility(View.GONE);
+                science_up.setVisibility(View.VISIBLE);
 
 
             }

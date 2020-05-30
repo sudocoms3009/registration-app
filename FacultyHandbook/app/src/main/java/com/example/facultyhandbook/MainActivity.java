@@ -120,6 +120,8 @@ public class MainActivity extends AppCompatActivity {
                                 return true;
 
                             case R.id.settings:
+                                Intent intent4 = new Intent(getApplicationContext(), CurriculaActivity.class);
+                                startActivity(intent4);
 
                                 return true;
                             case R.id.logout:

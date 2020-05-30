@@ -3,7 +3,7 @@
 
     <item
         android:id="@+id/locations"
-        android:title="Locations Of Faculties"
+        android:title="General Rules For Faculties"
         android:visible="true" />
 
     <item
@@ -13,12 +13,12 @@
 
     <item
         android:id="@+id/content"
-        android:title="Content Of The App"
+        android:title="Attendance Rule For Faculties"
         android:visible="true" />
 
     <item
         android:id="@+id/settings"
-        android:title="Settings"
+        android:title="Curricula For Faculties"
         android:visible="true" />
 
     <item

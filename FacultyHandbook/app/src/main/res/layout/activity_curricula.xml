@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AppContentActivity">
+    tools:context=".CurriculaActivity">
+
 
     <LinearLayout
         android:id="@+id/taskbar"
@@ -53,7 +54,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Attendance Rules For Faculties"
+                    android:text="Curricula Rules"
                     android:textColor="#fff"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -64,7 +65,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2020 attendance rules for each faculty"
+                    android:text="2020 curricula rules for each faculty"
                     android:textColor="#fff"
                     android:textSize="13sp"
                     android:layout_marginLeft="10dp"
