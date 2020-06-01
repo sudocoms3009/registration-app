@@ -134,8 +134,8 @@
                         android:layout_width="0dp"
                         android:layout_weight="0.8"
                         android:layout_height="match_parent"
-                        android:text="Information About Module"
-                        android:textSize="17sp"
+                        android:text="Information about module"
+                        android:textSize="16sp"
                         android:textColor="#fff"
                         android:gravity="center_vertical"
                         android:layout_marginLeft="50dp"/>
@@ -216,8 +216,8 @@
                         android:layout_width="0dp"
                         android:layout_weight="0.8"
                         android:layout_height="match_parent"
-                        android:text="Pre-Requisite of Module"
-                        android:textSize="17sp"
+                        android:text="Pre-requisite of module"
+                        android:textSize="16sp"
                         android:textColor="#fff"
                         android:gravity="center_vertical"
                         android:layout_marginLeft="50dp"/>
@@ -247,39 +247,25 @@
 
             </LinearLayout>
 
-            <ScrollView
-                android:id="@+id/commerce_pages"
-                android:layout_width="match_parent"
-                android:layout_height="2001dp"
-                android:visibility="gone">
+
 
                 <LinearLayout
+                    android:id="@+id/commerce_pages"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_height="400dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
-                    <ImageView
+                    <ListView
+                        android:id="@+id/pre_listview"
                         android:layout_width="match_parent"
-                        android:layout_height="500dp"
-                        android:layout_marginTop="5dp"
-                        android:src="@drawable/page_1"/>
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="500dp"
-                        android:src="@drawable/page_2"/>
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="500dp"
-                        android:src="@drawable/page_3"/>
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="500dp"
-                        android:src="@drawable/page_4"/>
+                        android:layout_height="match_parent"
+
+                        ></ListView>
+
 
                 </LinearLayout>
 
-
-            </ScrollView>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -297,7 +283,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="0.8"
                         android:layout_height="match_parent"
-                        android:text="Co-Requisite of Module"
+                        android:text="Co-requisite of module"
                         android:textSize="17sp"
                         android:textColor="#fff"
                         android:gravity="center_vertical"
@@ -328,39 +314,23 @@
 
             </LinearLayout>
 
-            <ScrollView
-                android:id="@+id/engineering_pages"
-                android:layout_width="match_parent"
-                android:layout_height="2001dp"
-                android:visibility="gone">
 
                 <LinearLayout
+                    android:id="@+id/engineering_pages"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_height="400dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
-                    <ImageView
+                    <ListView
+                        android:id="@+id/co_listview"
                         android:layout_width="match_parent"
-                        android:layout_height="500dp"
-                        android:layout_marginTop="5dp"
-                        android:src="@drawable/page_1"/>
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="500dp"
-                        android:src="@drawable/page_2"/>
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="500dp"
-                        android:src="@drawable/page_3"/>
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="500dp"
-                        android:src="@drawable/page_4"/>
+                        android:layout_height="match_parent"
+
+                        ></ListView>
 
                 </LinearLayout>
 
-
-            </ScrollView>
 
 
 

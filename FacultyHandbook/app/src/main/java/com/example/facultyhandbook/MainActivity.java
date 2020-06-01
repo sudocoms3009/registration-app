@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView dropdown;
     SharedPreferences mPreferences;
     CardView science, commerce, engineering, health, humanities;
+    CardView year2019,year2018,year2017, year2016;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +38,56 @@ public class MainActivity extends AppCompatActivity {
         engineering = findViewById(R.id.engineering);
         health = findViewById(R.id.health);
         humanities = findViewById(R.id.humanity);
+
+        year2019 = findViewById(R.id.year2019);
+        year2018 = findViewById(R.id.year2018);
+        year2017 = findViewById(R.id.year2017);
+        year2016 = findViewById(R.id.year2016);
+
+
+        year2019.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), PreviousRulesActivity.class);
+                intent.putExtra("year","2019");
+                startActivity(intent);
+
+            }
+        });
+
+        year2018.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), PreviousRulesActivity.class);
+                intent.putExtra("year","2018");
+                startActivity(intent);
+
+            }
+        });
+
+        year2017.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), PreviousRulesActivity.class);
+                intent.putExtra("year","2017");
+                startActivity(intent);
+
+            }
+        });
+
+        year2016.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), PreviousRulesActivity.class);
+                intent.putExtra("year","2016");
+                startActivity(intent);
+
+            }
+        });
 
         getSearch.setOnClickListener(new View.OnClickListener() {
             @Override

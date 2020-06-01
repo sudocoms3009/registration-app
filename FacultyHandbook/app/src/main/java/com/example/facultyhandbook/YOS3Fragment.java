@@ -97,7 +97,7 @@ public class YOS3Fragment extends Fragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(getContext(), CourseInfoActivity.class);
                 //intent.putExtra("id",arrayList.get(position).get);
-                //intent.putExtra("School", arrayList.get(position).getcourseCode());
+                intent.putExtra("Course", arrayList.get(position).getcourseCode());
                 startActivity(intent);
             }
         });
