@@ -5,11 +5,8 @@ public class Prerequisite {
 
     String courseName;
 
-
-
     public Prerequisite(String courseName) {
         this.courseName = courseName;
-
     }
 
     public String getcourseName() {
