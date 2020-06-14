@@ -7,3 +7,5 @@ When a user launches the app, the app will display a list of names all the facul
 
 [![Build Status](https://travis-ci.org/sudocoms3009/registration-app.svg?branch=master)](https://travis-ci.org/sudocoms3009/registration-app)
 [![codecov](https://codecov.io/gh/sudocoms3009/registration-app/branch/master/graph/badge.svg)](https://codecov.io/gh/sudocoms3009/registration-app)
+
+[![Coverage Status](https://coveralls.io/repos/github/1395505/sudocoms3009-registration-app/badge.svg?branch=master)](https://coveralls.io/github/1395505/sudocoms3009-registration-app?branch=master)
