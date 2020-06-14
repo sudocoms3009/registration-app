@@ -5,7 +5,6 @@ public class Corequisite {
 
     String courseName;
 
-
     public Corequisite(String courseName) {
         this.courseName = courseName;
 

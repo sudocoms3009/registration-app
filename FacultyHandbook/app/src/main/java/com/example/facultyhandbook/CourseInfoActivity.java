@@ -78,7 +78,6 @@ public class CourseInfoActivity extends AppCompatActivity {
                 science.setVisibility(View.GONE);
                 science_up.setVisibility(View.VISIBLE);
 
-
             }
         });
 
@@ -89,7 +88,6 @@ public class CourseInfoActivity extends AppCompatActivity {
                 science_pages.setVisibility(View.GONE);
                 science_up.setVisibility(View.GONE);
                 science.setVisibility(View.VISIBLE);
-
 
             }
         });
@@ -112,7 +110,6 @@ public class CourseInfoActivity extends AppCompatActivity {
                 commerce_pages.setVisibility(View.GONE);
                 commerce_up.setVisibility(View.GONE);
                 commerce.setVisibility(View.VISIBLE);
-
 
             }
         });
@@ -161,7 +158,6 @@ public class CourseInfoActivity extends AppCompatActivity {
 
         /*arrayList_pre = new ArrayList<>();
         arrayList_co = new ArrayList<>();
-
         arrayList_pre.add(new Prerequisite(courseName));
         arrayList_pre.add(new Prerequisite("hello 2"));
         arrayList_pre.add(new Prerequisite("hello 3"));
@@ -171,8 +167,7 @@ public class CourseInfoActivity extends AppCompatActivity {
         listView_pre.setAdapter(prerequisiteListViewAdapter);
         corequisiteListViewAdapter = new CorequisiteListViewAdapter(getApplicationContext(), arrayList_co);
         listView_co.setAdapter(corequisiteListViewAdapter);
-
-*/
+        */
 
        getSchools();
 
@@ -191,8 +186,6 @@ public class CourseInfoActivity extends AppCompatActivity {
             protected void onPostExecute(String output) {
 
                 System.out.println("This is the in.. " + output);
-
-                //test= output;
 
                 try {
 
