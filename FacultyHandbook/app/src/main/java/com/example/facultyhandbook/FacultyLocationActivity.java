@@ -43,8 +43,6 @@ public class FacultyLocationActivity extends AppCompatActivity {
         health_pages.setVisibility(View.GONE);
         humanities_pages.setVisibility(View.GONE);
 
-
-
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

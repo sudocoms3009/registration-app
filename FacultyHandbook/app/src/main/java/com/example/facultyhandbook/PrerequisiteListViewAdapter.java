@@ -35,23 +35,12 @@ public class PrerequisiteListViewAdapter extends BaseAdapter {
     @Override
     public View getView(final int position, View convertView, ViewGroup parent) {
 
-
         LayoutInflater inflater = (LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
         convertView = inflater.inflate(R.layout.listview_rules, null);
 
         //ImageView pic = (ImageView)convertView.findViewById(R.id.picture);
         TextView courseName = (TextView)convertView.findViewById(R.id.courseName);
-
-
-
-
         courseName.setText(arraylist.get(position).getcourseName());
-
-
-
-
-
-
         return convertView;
     }
 

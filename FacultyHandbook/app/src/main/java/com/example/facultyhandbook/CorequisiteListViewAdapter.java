@@ -41,18 +41,7 @@ public class CorequisiteListViewAdapter extends BaseAdapter {
 
         //ImageView pic = (ImageView)convertView.findViewById(R.id.picture);
         TextView courseName = (TextView)convertView.findViewById(R.id.courseName);
-
-
-
-
         courseName.setText(arraylist.get(position).getcourseName());
-
-
-
-
-
-
-
 
         return convertView;
     }

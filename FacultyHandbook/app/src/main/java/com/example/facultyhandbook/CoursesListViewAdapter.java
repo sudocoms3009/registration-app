@@ -54,7 +54,6 @@ public class CoursesListViewAdapter extends BaseAdapter {
         courseDuration.setText(arraylist.get(position).getcourseDuration());
         nqfPoints.setText(arraylist.get(position).getnqfPoints());
 
-
         return convertView;
     }
 

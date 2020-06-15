@@ -23,7 +23,6 @@ public class HumanitiesActivity extends AppCompatActivity {
     ArrayList<Schools> arrayList;
     private static final String URLGET = "https://lamp.ms.wits.ac.za/~s1422085/FacultyRegistrationTest/getHumanitiesSchools.php";
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,15 +73,10 @@ public class HumanitiesActivity extends AppCompatActivity {
 
                         JSONObject jsonobject = jsonArray.getJSONObject(i);
 
-
                         String schoolName = jsonobject.getString("schoolName");
                         String schoolDescription = jsonobject.getString("schoolDescription");
                         String numCourses = jsonobject.getString("numCourses");
-
-
                         //System.out.println("This is the in.. " + prodName);
-
-
 
                         arrayList.add(new Schools(schoolName, schoolDescription, numCourses));
                         schoolsListViewAdapter = new SchoolsListViewAdapter(getApplicationContext(), arrayList);
