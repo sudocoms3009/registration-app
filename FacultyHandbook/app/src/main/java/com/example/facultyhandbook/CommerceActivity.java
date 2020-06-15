@@ -3,8 +3,13 @@ package com.example.facultyhandbook;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -15,6 +20,7 @@ import java.util.ArrayList;
 public class CommerceActivity extends AppCompatActivity {
 
     ListView listView;
+    ImageView back;
 
     SchoolsListViewAdapter schoolsListViewAdapter;
     ArrayList<Schools> arrayList;
@@ -27,7 +33,28 @@ public class CommerceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_commerce);
         getSupportActionBar().hide();
 
+        back = findViewById(R.id.back);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
         listView = findViewById(R.id.commerce_listview);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getApplicationContext(), CourseInfoActivity.class);
+                //intent.putExtra("id",arrayList.get(position).get);
+                //intent.putExtra("Course", arrayList.get(position).getcourseCode());
+                Toast.makeText(CommerceActivity.this, "Item "+position+" selected", Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+            }
+        });
         /*arrayList = new ArrayList<>();
 
         arrayList.add(new Schools("Computer Science", "this is school of computer science we do programming and machine learning", "12"));

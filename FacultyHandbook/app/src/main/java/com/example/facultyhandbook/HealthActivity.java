@@ -3,7 +3,10 @@ package com.example.facultyhandbook;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import org.json.JSONArray;
@@ -15,6 +18,7 @@ import java.util.ArrayList;
 public class HealthActivity extends AppCompatActivity {
 
     ListView listView;
+    ImageView back;
 
     SchoolsListViewAdapter schoolsListViewAdapter;
     ArrayList<Schools> arrayList;
@@ -26,6 +30,16 @@ public class HealthActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_health);
         getSupportActionBar().hide();
+
+        back = findViewById(R.id.back);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
         listView = findViewById(R.id.health_listview);
                /*arrayList = new ArrayList<>();

@@ -20,6 +20,7 @@
         <activity android:name=".GovernanceActivity" />
         <activity android:name=".FacultyLocationActivity" />
         <activity android:name=".CoursesMainActivity" />
+        <activity android:name=".CoursesPreviousActivity" />
         <activity android:name=".HumanitiesActivity" />
         <activity android:name=".HealthActivity" />
         <activity android:name=".EngineeringActivity" />

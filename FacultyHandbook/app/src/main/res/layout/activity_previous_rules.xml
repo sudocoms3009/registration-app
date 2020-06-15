@@ -46,7 +46,7 @@
             </RelativeLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="170dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
@@ -58,7 +58,7 @@
                     android:textColor="#fff"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_marginTop="10dp">
 
                 </TextView>
@@ -68,10 +68,11 @@
                     android:layout_height="45dp"
                     android:orientation="horizontal"
                     app:layout_constraintTop_toTopOf="parent"
+                    android:gravity="left"
                     android:layout_marginTop="0dp"
-                    android:layout_marginLeft="10dp">
+                    android:layout_marginLeft="0dp">
 
-                    <TextView
+                    <!--<TextView
                         android:layout_width="0dp"
                         android:layout_weight="0.8"
                         android:layout_height="match_parent"
@@ -79,13 +80,12 @@
                         android:gravity="center_vertical"
                         android:textColor="#fff"
                         android:layout_marginLeft="0dp"
-                        android:textSize="18sp" />
+                        android:textSize="18sp" />-->
 
                     <Spinner
                         android:id="@+id/faculty"
-                        android:layout_width="0dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_weight="0.3"
                         android:spinnerMode="dropdown"
                         android:backgroundTint="#fff"
                         android:foregroundTint="#fff"
@@ -99,6 +99,26 @@
 
 
         </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/science"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="121dp">
+
+        <ListView
+            android:id="@+id/science_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            ></ListView>
 
 
     </LinearLayout>

@@ -3,7 +3,11 @@ package com.example.facultyhandbook;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import org.json.JSONArray;
@@ -15,10 +19,11 @@ import java.util.ArrayList;
 public class EngineeringActivity extends AppCompatActivity {
 
     ListView listView;
+    ImageView back;
 
     SchoolsListViewAdapter schoolsListViewAdapter;
     ArrayList<Schools> arrayList;
-    private static final String URLGET = "https://lamp.ms.wits.ac.za/~s1422085/FacultyRegistrationTest/getEngineeringSchools.php";
+    private static final String URLGET = "https://lamp.ms.wits.ac.za/~s1422085/FacultyRegistrationTest_2/Schools/getEngineeringSchools.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +31,29 @@ public class EngineeringActivity extends AppCompatActivity {
         setContentView(R.layout.activity_engineering);
         getSupportActionBar().hide();
 
+        back = findViewById(R.id.back);
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
         listView = findViewById(R.id.engineering_listview);
+
+        getSchools();
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getApplicationContext(), CoursesMainActivity.class);
+                //intent.putExtra("id",arrayList.get(position).get);
+                intent.putExtra("School", arrayList.get(position).getschoolName());
+                startActivity(intent);
+            }
+        });
               /*arrayList = new ArrayList<>();
 
         arrayList.add(new Schools("Computer Science", "this is school of computer science we do programming and machine learning", "12"));
@@ -37,7 +64,7 @@ public class EngineeringActivity extends AppCompatActivity {
         schoolsListViewAdapter = new SchoolsListViewAdapter(getApplicationContext(), arrayList);
         listView.setAdapter(schoolsListViewAdapter);*/
 
-        getSchools();
+
     }
 
     public void getSchools() {
